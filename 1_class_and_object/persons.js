@@ -1,11 +1,11 @@
 const Person = require('./person.js').Person
-const bob = new Person("Bob")
-const brian = new Person("Brian")
-const bella = new Person("Bella")
+const bob = new Person("Bob", 1.98, 85)
+const brian = new Person("Brian", 1.76, 95)
+const bella = new Person("Bella", 1.65, 55)
 
 const persons = [bob, brian, bella]
 
-while (bella.getPikkus() < 170) {
+/* while (bella.getPikkus() < 170) {
     bella.setPikkus(bella.getPikkus() + 1)
 }
 
@@ -23,7 +23,7 @@ for (let i = 0; i < 50; i++) {
     brian.becomeHeavier()
 }
 
-bella.setkaal(45)
+bella.setkaal(45) */
 
 while (bob.getAge() < 15) {
     bob.becomeOlder()

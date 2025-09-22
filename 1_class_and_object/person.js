@@ -11,7 +11,6 @@ class Person {
     setPikkus(pikkus) {
         if (pikkus < 0) {
             console.log("Height cannot be negative.")
-            return
         } else {        
         this.pikkus = pikkus
         }
@@ -24,7 +23,6 @@ class Person {
     setkaal(kaal) {
         if (kaal < 0) {
             console.log("Weight cannot be negative.")
-            return
         } else {        
         this.kaal = kaal
         }
@@ -50,6 +48,8 @@ class Person {
 
     constructor(name, pikkus, kaal ) {
         this.name = name
+        this.kaal = this.setkaal(kaal)
+        this.pikkus = this.setPikkus(pikkus)
     }
 
     becomeOlder() {
@@ -63,14 +63,16 @@ class Person {
         return true
     }
 
+     BMI() {
+        const heightInMeters = this.pikkus / 100;
+        return this.kaal / (heightInMeters * heightInMeters);
+    }
+
     printPerson() { 
         console.log(`name: ${this.name}, age: ${this.age} weight: ${this.kaal} height: ${this.pikkus} BMI: ${this.BMI().toFixed(2)}`)
     }
 
-    BMI() {
-        const heightInMeters = this.pikkus / 100;
-        return this.kaal / (heightInMeters * heightInMeters);
-    }
+   
 
     getName() {
         return this.name
