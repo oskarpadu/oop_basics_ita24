@@ -1,8 +1,8 @@
-export class Person {
+class Person {
     name = ""
     age = 0
 
-    setName(name) {
+    constructor(name) {
         this.name = name
     }
 
