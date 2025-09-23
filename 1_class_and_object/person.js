@@ -46,10 +46,11 @@ class Person {
         return true
     }
 
-    constructor(name, pikkus, kaal ) {
-        this.name = name
-        this.kaal = this.setkaal(kaal)
-        this.pikkus = this.setPikkus(pikkus)
+    constructor(name, pikkus = 0, kaal = 0, age = 0) {
+    this.name = name
+    this.setkaal(kaal)
+    this.setPikkus(pikkus)
+    this.age = age
     }
 
     becomeOlder() {

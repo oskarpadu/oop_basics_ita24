@@ -1,7 +1,7 @@
 const Person = require('./person.js').Person
-const bob = new Person("Bob", 1.98, 85)
-const brian = new Person("Brian", 1.76, 95)
-const bella = new Person("Bella", 1.65, 55)
+const bob = new Person("Bob", 198, 85)
+const brian = new Person("Brian", 176, 95)
+const bella = new Person("Bella", 165, 55)
 
 const persons = [bob, brian, bella]
 
